@@ -1,0 +1,46 @@
+# Ejemplos de Gramáticas por Tipo de Chomsky
+
+## Tipo 3 - Regular (Derecha)
+S → aA
+A → bB | b
+B → a
+
+## Tipo 3 - Regular (Izquierda)
+S → Aa
+A → Bb | b
+B → a
+
+## Tipo 2 - Libre de Contexto
+S → aSb | ab
+
+## Tipo 2 - Libre de Contexto (Palíndromos)
+S → aSa | bSb | a | b | ε
+
+## Tipo 1 - Sensible al Contexto
+S → aSBC | aBC
+CB → BC
+aB → ab
+bB → bb
+bC → bc
+cC → cc
+
+## Tipo 0 - Recursivamente Enumerable
+S → ACaB
+Ca → aaC
+CB → DB | E
+aD → Da
+AD → AC
+aE → Ea
+AE → ε
+
+## Gramática Ambigua (Tipo 2)
+S → S + S | S * S | a
+
+## Gramática con Recursión a Izquierda (Tipo 2)
+A → Aa | b
+
+## Gramática con Producciones Inútiles
+S → aA | b
+A → aA
+B → c
+
